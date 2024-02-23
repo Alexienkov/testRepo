@@ -17,6 +17,10 @@ while i >= -7 {
 print("Hey Gays")
 print("Hello Swift")
 var b = 6
+while b > 0 {
+    b -= 1
+    print(b)
+}
 
 while b > 0 {
     b -= 1
