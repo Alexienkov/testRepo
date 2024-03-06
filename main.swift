@@ -22,3 +22,5 @@ while b > 0 {
     b -= 1
     print(b)
 }
+
+print("Привет, мир")
