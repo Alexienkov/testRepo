@@ -24,3 +24,5 @@ while b > 0 {
 }
 
 print("Привет, мир")
+
+print("Goodbyes")
