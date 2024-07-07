@@ -1,0 +1,709 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ********************************* */
+
+.poster {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 100vh;
+    background: #C8C8C8 url("image/background.jpg") no-repeat 100% 100%;
+    background-size: cover;
+}
+
+#header {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10%;
+    color: white;
+    border-bottom: 1px solid #eaedf1;
+    background-color: rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+    transition: all 3s ease;
+    z-index: 3;
+}
+
+#header:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #303641;
+    background-image:
+        linear-gradient(135deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.2) 100%),
+        linear-gradient(90deg, #192129, #303641, #484e57);
+    background-size: 8px 8px, 100%;
+    opacity: 0;
+    transition: all 2s;
+    z-index: 3;
+}
+
+#header.header:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #303641;
+    background-image:
+        linear-gradient(135deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.2) 100%),
+        linear-gradient(90deg, #192129, #303641, #484e57);
+    background-size: 8px 8px, 100%;
+    opacity: 1;
+    transition: all 2s;
+    z-index: 3;
+}
+
+.tagline {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 100%;
+    margin-left: 5rem;
+    font-size: 30px;
+    text-shadow: 5px 5px 20px #222426;
+    z-index: 4;
+}
+
+.tagline_logo {
+    display: flex;
+    justify-content: center;
+    transform: scale(1.3)
+}
+
+
+.tagline_slogan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 100%;
+    font-family: 'Playball', cursive;
+    margin-left: 20px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    margin-left: 13rem;
+    width: 60%;
+    height: 100%;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 600px;
+    height: 100%;
+    font-family: 'Cormorant Infant', serif;
+    font-size: 30px;
+    text-shadow: 5px 5px 20px #222426;
+    z-index: 4;
+}
+
+.menu li {
+    font-family: 'Cormorant Infant', serif;
+}
+
+.about-button,
+.project-button,
+.tech-button,
+.switch-slider,
+.close-wrap {
+    cursor: pointer;
+}
+
+.title {
+    position: absolute;
+    display: block;
+    margin-top: 130px;
+    align-self: center;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    text-shadow: 5px 5px 20px #222426;
+    width: 100%;
+    height: 300px;
+    color: white;
+}
+
+.title p {
+    font-size: 40px;
+    margin-bottom: -10px;
+    z-index: -1;
+}
+
+.title h1 {
+    font-size: 100px;
+    margin-bottom: 20px;
+}
+
+.footer {
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 13vh;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    margin-left: 80px;
+    width: 180px;
+    height: 55px;
+    background-color: rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px);
+    border-radius: 30px;
+    border: 2px solid #eaedf1;
+}
+
+.contact_wrapper {
+    margin-left: 25px;
+}
+
+.contact_logo {
+    width: 30px;
+    height: 30px;
+}
+
+.switch {
+    margin-left: 930px;
+}
+
+.switch,
+.switch-label,
+.switch-slider {
+    width: 77px;
+    height: 27px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+}
+
+.switch-check {
+    position: absolute;
+    opacity: 0;
+}
+
+.switch-label,
+.switch-slider {
+    position: absolute;
+    top: 0;
+}
+
+.switch-label {
+    left: 0;
+    text-indent: -9999px;
+    border: 2px solid white;
+    border-radius: 27px;
+}
+
+.switch-slider {
+    border-radius: 27px;
+    box-shadow:
+        0 0 0 2px rgba(0, 0, 0, 0.1) inset,
+        0 0 4px rgba(0, 0, 0, 0.5) inset,
+        0 5px 4px 1px rgba(0, 0, 0, 0.3) inset,
+        0 27px 0 rgba(0, 0, 0, 0.07) inset;
+    -webkit-transition: width 0.2s linear;
+    -moz-transition: width 0.2s linear;
+    -o-transition: width 0.2s linear;
+    transition: width 0.2s linear;
+}
+
+.switch-slider-on {
+    left: 0;
+    width: 54px;
+    background: #dadcdd url(image/on.svg) 20px 7px no-repeat;
+}
+
+.switch-slider-off {
+    right: 0;
+    background: #FFF url(image/off.svg) 35px 7px no-repeat;
+}
+
+.switch-slider-off:after {
+    position: absolute;
+    top: 0.5px;
+    left: 0.5px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #E5E5E5;
+    background: -webkit-linear-gradient(#D0D0D0, #FDFDFD);
+    background: -moz-linear-gradient(#D0D0D0, #FDFDFD);
+    background: -o-linear-gradient(#D0D0D0, #FDFDFD);
+    background: linear-gradient(#D0D0D0, #FDFDFD);
+    box-shadow:
+        0 0 2px 2px #FFF inset,
+        0 0 4px 1px rgba(0, 0, 0, 0.6);
+    content: '';
+}
+
+.switch-label:active .switch-slider-off:after,
+.switch-check:focus+.switch-label .switch-slider-off:after {
+    background: #D5D5D5;
+    background: -webkit-linear-gradient(#C8C8C8, #E4E4E4);
+    background: -moz-linear-gradient(#C8C8C8, #E4E4E4);
+    background: -o-linear-gradient(#C8C8C8, #E4E4E4);
+    background: linear-gradient(#C8C8C8, #E4E4E4);
+}
+
+.switch-check:checked+.switch-label .switch-slider-on {
+    width: 77px;
+}
+
+.switch-check:checked+.switch-label .switch-slider-off {
+    width: 27px;
+}
+
+.letter {
+    position: absolute;
+    display: flex;
+    margin: auto;
+    visibility: hidden;
+    box-sizing: border-box;
+    z-index: 1;
+    top: -100%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image:
+        linear-gradient(transparent 0px, transparent 49px, rgba(255, 225, 225, 0.2) 50px, transparent 51px, transparent 99px, rgba(255, 255, 255, 0.2) 100px),
+        linear-gradient(120deg, transparent 0, transparent 48px, rgba(255, 255, 255, 0.2) 49px, transparent 50px, transparent 98px, rgba(255, 255, 255, 0.2) 99px, transparent 100px),
+        linear-gradient(60deg, transparent 0, transparent 48px, rgba(255, 255, 255, 0.2) 49px, transparent 50px, transparent 98px, rgba(255, 255, 255, 0.2) 99px, transparent 100px),
+        linear-gradient(90deg, #dddddd, #dddddd);
+    background-size: 100px 100px, 115px 100px, 115px 100px, auto;
+    padding: 90px 40px 0px 40px;
+    transition-delay: 1s;
+    transition: all 2s ease;
+}
+
+.letter.active {
+    position: absolute;
+    visibility: visible;
+    top: 0;
+    left: 0;
+}
+
+.letter-title {
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.letter-title h2 {
+    font-family: 'Cormorant Infant', serif;
+    font-size: 60px;
+}
+
+.letter-container {
+    display: flex;
+    margin-right: 40px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.letter-text {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    text-align: justify;
+}
+
+.letter-photo {
+    transition: all 0.5s ease;
+}
+
+.letter-photo:hover {
+    border-radius: 50%;
+    transform: rotate(360deg);
+}
+
+#box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    color: white;
+    font-family: 'Raleway';
+    font-size: 2.5rem;
+    margin: 30px;
+}
+
+.gradient-border {
+    --borderWidth: 3px;
+    background: #1D1F20;
+    position: relative;
+    border-radius: var(--borderWidth);
+}
+
+.gradient-border::after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+}
+
+.gradient-border:hover::after {
+    border-radius: 50%;
+}
+
+
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.project {
+    position: absolute;
+    display: flex;
+    margin: auto;
+    visibility: hidden;
+    box-sizing: border-box;
+    z-index: 1;
+    left: -100%;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image:
+        linear-gradient(transparent 0px, transparent 49px, rgba(255, 225, 225, 0.2) 50px, transparent 51px, transparent 99px, rgba(255, 255, 255, 0.2) 100px),
+        linear-gradient(120deg, transparent 0, transparent 48px, rgba(255, 255, 255, 0.2) 49px, transparent 50px, transparent 98px, rgba(255, 255, 255, 0.2) 99px, transparent 100px),
+        linear-gradient(60deg, transparent 0, transparent 48px, rgba(255, 255, 255, 0.2) 49px, transparent 50px, transparent 98px, rgba(255, 255, 255, 0.2) 99px, transparent 100px),
+        linear-gradient(90deg, #dddddd, #dddddd);
+    background-size: 100px 100px, 115px 100px, 115px 100px, auto;
+    padding: 90px 40px 0px 40px;
+    transition-delay: 1s;
+    transition: all 2s ease;
+}
+
+.project.active {
+    position: absolute;
+    visibility: visible;
+    top: 0;
+    left: 0;
+}
+
+.project-title {
+    position: absolute;
+    margin-left: 30px;
+}
+
+.project-title h2 {
+    font-family: 'Cormorant Infant', serif;
+    font-size: 60px;
+}
+
+.project-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-left: 120px;
+    width: 100%;
+    height: 600px;
+}
+
+.template {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 500px;
+    height: 250px;
+}
+.template-container {
+   /* float: right; */
+   position: relative;
+   left: -140px;
+   /* height: 100%; */
+}
+
+.template-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: center;
+    position: relative;
+    padding: 10px;
+    /* top: -255px;
+    left: 300px; */
+    border-radius: 40px;
+    background: linear-gradient(90deg, #f6f7f8, #e1e8f2, #d9e1ee);
+    width: 200px;
+    height: 210px;
+}
+
+.template-image {
+    border-radius: 30px;
+    width: 435px;
+    height: 250px;
+}
+.novik {
+    background-image: url(image/project/novik.png);
+    background-size: 100% 100%;
+}
+.novik:hover {
+    background-color: white;
+    background-image: url(image/project/novik.svg);
+}
+.template-title {
+    font-family: 'Roboto', sans-serif;
+    border-bottom: 1px solid grey;
+    font-size: 25px;
+}
+.template-text {
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    border-bottom: 1px solid grey;
+}
+.template-tech {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+.tech {
+    position: absolute;
+    display: flex;
+    margin: auto;
+    visibility: hidden;
+    box-sizing: border-box;
+    z-index: 1;
+    right: -100%;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image:
+        linear-gradient(transparent 0px, transparent 49px, rgba(255, 225, 225, 0.2) 50px, transparent 51px, transparent 99px, rgba(255, 255, 255, 0.2) 100px),
+        linear-gradient(120deg, transparent 0, transparent 48px, rgba(255, 255, 255, 0.2) 49px, transparent 50px, transparent 98px, rgba(255, 255, 255, 0.2) 99px, transparent 100px),
+        linear-gradient(60deg, transparent 0, transparent 48px, rgba(255, 255, 255, 0.2) 49px, transparent 50px, transparent 98px, rgba(255, 255, 255, 0.2) 99px, transparent 100px),
+        linear-gradient(90deg, #dddddd, #dddddd);
+    background-size: 100px 100px, 115px 100px, 115px 100px, auto;
+    padding: 90px 40px 0px 40px;
+    transition-delay: 1s;
+    transition: all 2s ease;
+}
+
+.tech.active {
+    position: absolute;
+    visibility: visible;
+    top: 0;
+    right: 0;
+}
+
+.tech-title {
+    position: absolute;
+    margin-left: 30px;
+}
+
+.tech-title h2 {
+    font-family: 'Cormorant Infant', serif;
+    font-size: 60px;
+}
+
+.tech-container {
+    position: relative;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.tech-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    background-color: white;
+    border-radius: 30px;
+    width: 200px;
+    height: 200px;
+}
+
+.tech-logo {
+    width: 100px;
+    height: 100px;
+}
+
+.close-wrap {
+    position: absolute;
+    z-index: 10;
+    top: 5px;
+    left: 1160px;
+}
+
+.lock {
+    overflow: hidden;
+}
