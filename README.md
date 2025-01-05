@@ -1,2 +1,2 @@
 # testRepo
-Testing repository of Github functional.
+Тестирование возможностей Гитхаба
